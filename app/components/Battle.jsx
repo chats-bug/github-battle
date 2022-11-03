@@ -1,6 +1,7 @@
 import * as React from 'react';
 import PropTypes from "prop-types";
 import { close } from "./icons";
+import Results from './Results';
 
 function Instructions() {
 	return(
@@ -119,11 +120,21 @@ export default class Battle extends React.Component {
 		});
 	}
 
+	onReset() {
+		this.setState({
+			battle: false
+		})
+	}
 
 	render() {
 		const { playerOne, playerTwo, battle } = this.state;
 		const disabled = !playerOne || !playerTwo;
 
+		if (battle == true) {
+			return(
+				<Results playerOne={playerOne} playerTwo={playerTwo} onReset={onReset}/>
+			)
+		}
 
 		return(
 			<main className="stack main-stack animate-in">
