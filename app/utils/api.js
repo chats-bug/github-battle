@@ -2,7 +2,7 @@ export async function fetchPopularRepos(language) {
 	const endpoint = window.encodeURI(`https://api.github.com/search/repositories?q=stars:>1+language:${language}&sort=stars&order=desc&type=Repositories`);
 
 	const res = await fetch(endpoint);
-	const data = res.json();
+	const data = await res.json();
 	if (!data.items) {
 		throw new Error(data.message);
 	}
@@ -70,5 +70,5 @@ function getScore(repos) {
 		return count + forks_count;
 	}, 0);
 
-	return totalForks + totalForks + (repos.length);
+	return totalStars + totalForks;
 } 
