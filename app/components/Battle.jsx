@@ -120,19 +120,13 @@ export default class Battle extends React.Component {
 		});
 	}
 
-	onReset() {
-		this.setState({
-			battle: false
-		})
-	}
-
 	render() {
 		const { playerOne, playerTwo, battle } = this.state;
 		const disabled = !playerOne || !playerTwo;
 
 		if (battle == true) {
 			return(
-				<Results playerOne={playerOne} playerTwo={playerTwo} onReset={onReset}/>
+				<Results playerOne={playerOne} playerTwo={playerTwo}/>
 			)
 		}
 
