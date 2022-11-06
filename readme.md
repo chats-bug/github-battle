@@ -34,18 +34,17 @@
 </details>
 
 
----
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Project Screen Shot](./readme-images/proxy.jpg)
+![Project Screen Shot](./readme-images/popular-page.png)
 
-This project is a github stars battle ⚔️. It's a simple app that allows you to compare the number of stars of two github repositories.
+This project is a github stars battle ⚔️. It's a simple website where you can check the most popular repositories in your favorite programming languages.
+Also you can battle two users to see who wins 🥇.
 
 <p align="right"><a href="#readme-top">Top 🔺</a></p>
 
 
----
 ### Tech Used
 
 This section should list all the technologies such as programming languages and frameworks/libraries used to build out project.
@@ -58,7 +57,6 @@ This section should list all the technologies such as programming languages and 
 <p align="right"><a href="#readme-top">Top 🔺</a></p>
 
 
----
 <!-- GETTING STARTED -->
 ## Getting Started
 Follow the steps listed below to set up the project in your local machine.
@@ -87,27 +85,34 @@ To get a local copy up and running follow these simple steps.
 <p align="right"><a href="#readme-top">Top 🔺</a></p>
 
 
----
+
 <!-- USAGE EXAMPLES -->
 ## Usage
+We have two pages, the popular page and the battle page.
+* The popular page displays the 30 most popular repos.
+![Popular Page](./readme-images/popular-page.png)
+* The battle page allows you to battle two users.
+![Battle Page](./readme-images/battle-users.png)
+Simply enter the usernames of the users you want to battle and click the battle button.
+![Battle Results](./readme-images/battle-result.png)
+
 
 
 <p align="right"><a href="#readme-top">Top 🔺</a></p>
 
 
----
 <!-- ROAD-MAP -->
 ## Road-map
 
 - [x] Get started with React
-- [ ] Code the components
-- [ ] Use the Github API to get the data
+- [x] Code the components
+- [x] Use the Github API to get the data
+- [ ] Refactor the project to add additional features and improve the code
 - [ ] Learn React router
 
 <p align="right"><a href="#readme-top">Top 🔺</a></p>
 
 
----
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
