@@ -2,6 +2,8 @@ import * as React from 'react';
 import PropTypes from "prop-types";
 import { beginBattle } from '../utils/api';
 import Loading from './Loading';
+import withSearchParams from './withSearchParams';
+import { Link } from 'react-router-dom';
 
 
 function Card({ profile }) {
@@ -66,7 +68,7 @@ Card.propTypes = {
 };
 
 
-export default class Results extends React.Component {
+class Results extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -79,7 +81,10 @@ export default class Results extends React.Component {
 	}
 
 	componentDidMount() {
-		const { playerOne, playerTwo } = this.props;
+		const sp = this.props.router.searchParams;
+		const playerOne = sp.get('playerOne')
+		const playerTwo = sp.get('playerTwo')
+
 		beginBattle([playerOne, playerTwo])
 			.then((players) => {
 				this.setState({
@@ -112,6 +117,14 @@ export default class Results extends React.Component {
 			<main className="animate-in stack main-stack">
 				<div className="split">
 					<h1>Results</h1>
+					<Link
+						to={{
+							pathname: "/battle"
+						}}
+						className="btn secondary"
+					>
+						Reset
+					</Link>
 				</div>
 				<section className="grid">
 					<article className="results-container">
@@ -134,7 +147,7 @@ export default class Results extends React.Component {
 						<Card profile={loser.profile} />
 						<p className="results">
 						<span>
-							{winner.score === loser.score ? "Tie" : "Loser"}
+							{winner.score === loser.score ? "Tie" : "Loser"}{" "}
 							{loser.score.toLocaleString()}
 						</span>
 						</p>
@@ -144,3 +157,5 @@ export default class Results extends React.Component {
 		)
 	}
 }
+
+export default withSearchParams(Results);
