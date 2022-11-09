@@ -53,6 +53,9 @@ This section should list all the technologies such as programming languages and 
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [React](https://reactjs.org/)
+* [React Router](https://reactrouter.com/en/main)
+* [Webpack](https://webpack.js.org/)
+* [Node.js](https://nodejs.org/en/)
 
 <p align="right"><a href="#readme-top">Top 🔺</a></p>
 
@@ -107,8 +110,8 @@ Simply enter the usernames of the users you want to battle and click the battle 
 - [x] Get started with React
 - [x] Code the components
 - [x] Use the Github API to get the data
-- [ ] Refactor the project to add additional features and improve the code
-- [ ] Learn React router
+- [x] Refactor the project to add additional features and improve the code
+- [x] Learn React router
 
 <p align="right"><a href="#readme-top">Top 🔺</a></p>
 
@@ -116,6 +119,6 @@ Simply enter the usernames of the users you want to battle and click the battle 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-In the process of learning react from [UI.DEV](https://ui.dev/react-v5/), I built this project. It's an excellent resource to get started with React.
+In the process of learning react from [ui.dev](https://ui.dev/react-v5/), I built this project. It's an excellent resource to get started with React.
 
 <p align="right"><a href="#readme-top">Top 🔺</a></p>
