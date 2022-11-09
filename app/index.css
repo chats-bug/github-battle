@@ -8,10 +8,10 @@
 	--pink: #f38ba3;
 	--green: #0ba95b;
 	--purple: #7b5ea7;
-	--biege-body: #fffbe3;
-	--biege: #f9f4da;
-	--biege-10: rgba(249, 244, 218, 0.1);
-	--biege-50: rgba(249, 244, 218, 0.5);
+	--beige-body: #fffbe3;
+	--beige: #f9f4da;
+	--beige-10: rgba(249, 244, 218, 0.1);
+	--beige-50: rgba(249, 244, 218, 0.5);
 	--blue: #12b5e5;
 	--orange: #fc7428;
 	--red: #ed203d;
@@ -28,7 +28,7 @@ body,
 
 body {
 	font-family: "Outfit", sans-serif;
-	background: var(--biege-body);
+	background: var(--beige-body);
 	color: var(--charcoal);
 }
 
@@ -47,25 +47,31 @@ a {
 
 .dark {
 	background: var(--coal);
-	color: var(--biege);
+	color: var(--beige);
 }
 
 .dark {
 	--bg: var(--coal);
 	--bg-alt: var(--charcoal);
-	--color: var(--biege);
-	--color-muted: var(--biege-50);
+	--color: var(--beige);
+	--color-muted: var(--beige-50);
 	--color-inverse: var(--charcoal);
-	--border-color: var(--biege-10);
+	--border-color: var(--beige-10);
 	--accent: var(--yellow);
 }
 
+
 .light {
-	--bg: var(--biege);
-	--bg-alt: var(--biege);
+	background: var(--beige);
+	color: var(--charcoal);
+}
+
+.light {
+	--bg: var(--beige);
+	--bg-alt: var(--beige);
 	--color: var(--charcoal);
 	--color-muted: var(--charcoal-50);
-	--color-inverse: var(--biege);
+	--color-inverse: var(--beige);
 	--border-color: var(--charcoal-10);
 	--accent: var(--purple);
 }
@@ -421,7 +427,6 @@ tbody td:first-child {
 }
 
 .tooltip {
-	position: relative;
 	box-sizing: border-box;
 	position: absolute;
 	width: 240px;

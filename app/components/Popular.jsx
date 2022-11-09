@@ -55,6 +55,7 @@ export default class Popular extends React.Component {
 
 	render() {
 		const { repos, error, selectedLanguage } = this.state
+		const { theme } = this.props;
 
 		return(
 			<main className="stack main-stack animate-in">
@@ -68,7 +69,7 @@ export default class Popular extends React.Component {
 
 				{error && <p className="text-center error">{error}</p>}
 				
-				{repos && <Table repos={repos}/>}
+				{repos && <Table repos={repos} theme={theme}/>}
 			</main>
 		);
 	}
