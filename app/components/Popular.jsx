@@ -25,21 +25,17 @@ LanguagesNav.propTypes = {
 }
 
 export default class Popular extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
+	state = {
 			selectedLanguage: "All",
 			repos: null,
 			error: null
-		};
-		this.updateLanguage = this.updateLanguage.bind(this);
-	}
+	};
 
 	async componentDidMount() {
 		await this.updateLanguage(this.state.selectedLanguage);
 	}
 
-	async updateLanguage(selectedLanguage) {
+	updateLanguage = async (selectedLanguage) => {
 		this.setState({
 			selectedLanguage
 		});
