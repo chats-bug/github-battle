@@ -3,14 +3,16 @@ import PropTypes from "prop-types";
 import { hashtag } from "./icons";
 import Tooltip from './Tooltip';
 
-function TableHead() {
+function TableHead({ theme }) {
 	return (
 		<thead>
-			<th style={{ width: "5%"}}>{hashtag}</th>
-			<th style={{ width: "50%"}}>Repositories</th>
-			<th style={{ width: "15%"}}>Stars</th>
-			<th style={{ width: "15%"}}>Forks</th>
-			<th style={{ width: "15%"}}>Open Issues</th>
+			<tr>
+				<th style={{ width: "5%"}} className={theme}>{hashtag}</th>
+				<th style={{ width: "50%"}} className={theme}>Repositories</th>
+				<th style={{ width: "15%"}} className={theme}>Stars</th>
+				<th style={{ width: "15%"}} className={theme}>Forks</th>
+				<th style={{ width: "15%"}} className={theme}>Open Issues</th>
+			</tr>
 		</thead>
 	)
 }
@@ -93,10 +95,10 @@ TableRow.propTypes = {
 	name: PropTypes.string.isRequired,
 }
 
-export default function Table({ repos }) {
+export default function Table({ repos, theme }) {
 	return (
 		<table>
-			<TableHead />
+			<TableHead theme={theme}/>
 			<tbody>
 				{repos.map((repo, index) => {
 					return <TableRow key={index} index={index} {...repo}/>
